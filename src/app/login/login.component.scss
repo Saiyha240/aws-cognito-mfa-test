@@ -1,0 +1,72 @@
+@import "~angular-bootstrap-md/scss/core/_colors";
+@import "variables";
+
+form {
+  label {
+    &.active, &:focus {
+      color: $secondary-color;
+    }
+  }
+
+  i {
+    &.fa {
+      color: $secondary-color;
+    }
+  }
+
+  .form-control {
+    border-width: 2.3px;
+  }
+
+  .form-group label {
+    width: 100%;
+  }
+
+  .btn {
+    &.btn-block {
+      padding: 12px 10px;
+    }
+  }
+
+  .margin-top20 {
+    margin-top: 20px;
+  }
+
+  .no-margin {
+    margin: 0;
+  }
+
+  button {
+    margin: 10px 0;
+    background-color: $secondary-color;
+    border: none;
+
+    &:hover {
+      background-color: darken(#B8789B, 20);
+    }
+
+    &.btn-facebook {
+      background-color: #3b5998;
+      position: relative;
+
+      fa {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-right: 1px solid rgba(0, 0, 0, 0.2);
+
+        i {
+          font-size: 2.25em;
+          line-height: 1.4;
+        }
+      }
+
+    }
+  }
+
+}

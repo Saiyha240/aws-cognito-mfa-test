@@ -1,0 +1,26 @@
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()" method="POST" lpformnum="1" _lpchecked="1">
+
+  <div class="form-group">
+    <label for="new_password">
+      MFA Code sent to {{user.challengeParam.CODE_DELIVERY_DESTINATION}}
+    </label>
+    <small class="d-none">
+      Code sent via {{user.challengeParam.CODE_DELIVERY_DELIVERY_MEDIUM}} to
+      {{user.challengeParam.CODE_DELIVERY_DESTINATION}}
+    </small>
+    <br>
+    <small *ngIf="error" class="red-text">
+      {{error.message}}
+    </small>
+    <div style="position:relative">
+      <input id="new_password" type="text" class="form-control" name="mfaCode"
+             formControlName="mfaCode" required="" autocomplete="off">
+    </div>
+  </div>
+
+  <div class="form-group no-margin">
+    <button type="submit" class="btn btn-block">
+      Confirm MFA Code
+    </button>
+  </div>
+</form>

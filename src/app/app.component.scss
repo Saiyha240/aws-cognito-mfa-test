@@ -1,0 +1,57 @@
+@import "~angular-bootstrap-md/scss/core/_colors";
+
+.brand {
+  width: 180px;
+  height: 100px;
+  overflow: hidden;
+  margin: 30px auto;
+
+  img {
+    height: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.card-wrapper {
+  width: 400px;
+  margin: 0 auto;
+
+  .card {
+    border-color: transparent;
+    box-shadow: 0 0 40px rgba(0, 0, 0, .05);
+
+    &.fat {
+      padding: 10px;
+    }
+
+    .card-title {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.footer {
+  margin: 40px 0;
+  color: #fff;
+  text-align: center;
+}
+
+@media screen and (max-width: 425px) {
+  .card-wrapper {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .card{
+    &.fat{
+      padding: 0;
+
+      .card-body {
+        padding: 15px;
+      }
+    }
+  }
+}
