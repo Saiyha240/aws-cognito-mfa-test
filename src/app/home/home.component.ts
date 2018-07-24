@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
+import {environment} from '../../environments/environment';
 
 @Component({
   selector: 'app-home',
@@ -14,6 +15,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.username = localStorage.getItem('username');
+    window.open(environment.redirect_url, '_self');
   }
 
   logout() {

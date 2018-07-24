@@ -24,8 +24,8 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
     this.loginForm = this.formBuilder.group({
-      username: ['pain', Validators.required],
-      password: ['123qweASD!!', Validators.required]
+      username: ['', Validators.required],
+      password: ['', Validators.required]
     });
 
     this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
@@ -60,7 +60,7 @@ export class LoginComponent implements OnInit {
       });
   }
 
-  socialSignIn() {
+  socialSignIn(facebook) {
   }
 
 }
